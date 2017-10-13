@@ -2,6 +2,8 @@
 
 All of these demos were done with the CoreOS Tectonic Sandbox which is a local environment for CoreOS's Enterprise Kubernetes platform. You can follow along at home with your Linux/macOS/Windows machine with this setup as well just [download Tectonic Sandbox](https://coreos.com/tectonic/sandbox).
 
+[Slides](https://speakerdeck.com/philips/production-backbone-monitoring-containerized-apps)
+
 ## Setting up an app to monitor
 
 Based on the application monitoring guide on [CoreOS Tectonic
@@ -101,7 +103,7 @@ metadata:
 data:
   alerting.rules: |
     ALERT HighErrorRate
-      IF sum by(service, code) (http_requests_total{code="404"}) > 10
+      IF sum by(service, code) (http_requests_total{code="404"}) > 1000
       LABELS {
         severity = "critical",
       }
@@ -133,3 +135,7 @@ Now put some 200 OK request load on it:
 ```
 http://localhost:8001/api/v1/namespaces/default/services/example-app:8080/proxy/
 ```
+
+## Infrastructure Monitoring
+
+See https://console.tectonicsandbox.com/prometheus and https://console.tectonicsandbox.com/alertmanager
