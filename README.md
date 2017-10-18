@@ -2,7 +2,7 @@
 
 All of these demos were done with the CoreOS Tectonic Sandbox which is a local environment for CoreOS's Enterprise Kubernetes platform. You can follow along at home with your Linux/macOS/Windows machine with this setup as well just [download Tectonic Sandbox](https://coreos.com/tectonic/sandbox).
 
-[Slides](https://speakerdeck.com/philips/production-backbone-monitoring-containerized-apps)
+[Slides](https://docs.google.com/presentation/d/1y0TYNiwpjFMjTgg7eBM5kz59Fey4r0Yj9IgQcNHDsDY/edit#slide=id.g28a5cb30c5_0_8197)
 
 ## Setting up an app to monitor
 
